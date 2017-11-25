@@ -9,4 +9,7 @@ $telegramApi = new TelegramBot();
 $updates = $telegramApi->getUpdates();
 
 
-print_r($updates);
+foreach ($updates as $update)
+{
+		$telegramApi->sendMessage($update->message->chat->id, 'Привет');
+}

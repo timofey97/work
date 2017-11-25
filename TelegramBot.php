@@ -33,8 +33,14 @@ class TelegramBot
 			return $response->result;
 		}
 
-		public function SendMassage()
+		public function sendMessage($chat_id, $text)
 		{
 			
+				$response = $this->query('sendMessage', [
+						'text' => $text,
+						'chat_id' => $chat_id
+				]);
+
+				return $response;
 		}
 }
