@@ -1,4 +1,6 @@
-<? php
+<?php
+
+use GuzzleHttp\Client;
 
 class TelegramBot
 {
@@ -20,13 +22,13 @@ class TelegramBot
 			]);	
 
 			$result = $client->request('GET');
-			return json_decode($result->getBidy());
+			return json_decode($result->getBody());
 		}
 
 		public function getUpdates()
 		{
 
-			$response = %this->query('getUpdates');
+			$response = $this->query('getUpdates');
 
 			return $response->result;
 		}

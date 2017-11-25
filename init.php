@@ -1,6 +1,6 @@
-<? php
+<?php
 
-include ('vendor/autoload.php');
+include('vendor/autoload.php');
 
 include('TelegramBot.php');
 
